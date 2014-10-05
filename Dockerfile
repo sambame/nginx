@@ -9,7 +9,7 @@ ENV NGINX_VERSION 1.7.6-1~precise
 
 RUN apt-get update && apt-get install -y nginx=${NGINX_VERSION}
 
-VOLUME ["/etc/nginx"]
+VOLUME ["/etc/nginx/conf.d"]
 VOLUME ["/var/www"]
 VOLUME ["/var/log"]
 
