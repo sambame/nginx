@@ -1,11 +1,11 @@
-FROM ubuntu:12.04
+FROM debian:wheezy
 MAINTAINER Shay Erlichmen <shay@samba.me>
 
 # Install Nginx
 RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62
-RUN echo "deb http://nginx.org/packages/mainline/ubuntu/ precise nginx" >> /etc/apt/sources.list
+RUN echo "deb http://nginx.org/packages/debian/ wheezy nginx" >> /etc/apt/sources.list
 
-ENV NGINX_VERSION 1.7.6-1~precise
+ENV NGINX_VERSION 1.6.2-1~wheezy
 
 RUN apt-get update && apt-get install -y nginx=${NGINX_VERSION}
 
